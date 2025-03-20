@@ -10,6 +10,7 @@ ol {
 
 ol li::marker {
   color: transparent;
+  pointer-events: none;
 
   /* робимо лічільник невидимим для доступності */
 }
