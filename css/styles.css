@@ -9,7 +9,7 @@ ol {
 }
 
 ol li::marker {
-  visibility: hidden;
+  color: transparent;
 
   /* робимо лічільник невидимим для доступності */
 }
