@@ -19,7 +19,7 @@ li {
 }
 
 .list li:not(:nth-child(n + 10))::before {
-  content: "0" counter(list-item); /*Елемент додає лічильник перед li з ведучим 0, окрім li починаючи з */
+  content: "0" counter(list-item); /*Елемент додає лічильник перед li з ведучим 0, окрім li починаючи з 10*/
 }
 p {
   position: relative;
