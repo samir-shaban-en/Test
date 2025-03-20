@@ -1,46 +1,72 @@
 body {
   margin: 0;
+  margin-top: 5px;
+  font-family: "Inter", sans-serif;
+}
+
+p,
+ol {
+  margin: 0;
 }
 .container {
-  box-sizing: border-box;
-  padding-inline: 20px;
-  max-width: 320px;
+  max-width: 375px;
+  padding-left: 20px;
+  padding-right: 20px;
+
   margin-left: auto;
   margin-right: auto;
 }
-p {
-  margin: 0;
-}
-
 ol {
   counter-reset: list-item; /*нужно для инициализации счетчика*/
-  position: relative;
   padding-left: 0;
   margin: 0;
+  background-color: #1b414b;
+  border-radius: 24px;
+  padding-inline: 20px;
+  padding-block: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
+
 ol li::marker {
   color: transparent;
   /* робимо лічільник невидимим для доступності */
 }
 
-li {
-  margin-top: 10px;
-}
-
 .list li::before {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #fbfbfb;
   content: " " counter(list-item, decimal-leading-zero); /*Елемент додає лічильник перед li, та друге значення це прчинати з 0 */
 }
-
+.stripes {
+  padding-top: 38px;
+}
 p {
   position: relative;
-  padding-top: 38px;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: #fbfbfb;
+  opacity: 0.8;
 }
 p::before {
   position: absolute;
   content: " ";
-  top: 18px;
+  top: -18px;
+
+  border-radius: 18px;
   width: 100%;
   height: 2px;
 
-  background-color: red;
+  background-color: rgba(251, 251, 251, 0.1);
 }
