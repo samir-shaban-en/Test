@@ -1,30 +1,36 @@
+body {
+  margin: 0;
+}
+.container {
+  box-sizing: border-box;
+  padding-inline: 20px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
 p {
   margin: 0;
 }
+
 ol {
+  counter-reset: list-item; /*нужно для инициализации счетчика*/
   position: relative;
   padding-left: 0;
   margin: 0;
-  list-style: decimal; /*Елемент додає лічильник перед li */
 }
-
 ol li::marker {
   color: transparent;
-  pointer-events: none;
 
   /* робимо лічільник невидимим для доступності */
 }
-
 li {
-  margin: 10px;
-}
-.list li::before {
-  content: " " counter(list-item); /*Елемент додає лічильник перед li */
+  margin-top: 10px;
 }
 
-.list li:not(:nth-child(n + 10))::before {
-  content: "0" counter(list-item); /*Елемент додає лічильник перед li з ведучим 0, окрім li починаючи з 10*/
+.list li::before {
+  content: " " counter(list-item, decimal-leading-zero); /*Елемент додає лічильник перед li, та друге значення це прчинати з0 */
 }
+
 p {
   position: relative;
   padding-top: 38px;
