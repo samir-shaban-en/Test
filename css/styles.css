@@ -6,9 +6,10 @@ ol {
   margin: 0;
 }
 
-ol {
-  list-style: none;
+ol li::marker {
+  color: transparent;
 }
+
 li {
   margin: 10px;
 }
@@ -17,7 +18,7 @@ li {
 }
 
 .list li:not(:nth-child(n + 10))::before {
-  content: "0" counter(list-item); /*Елемент додає лічильник перед li з ведучим 0, окрім li починаючи з 10 */
+  content: "0" counter(list-item); /*Елемент додає лічильник перед li з ведучим 0, окрім li починаючи з */
 }
 p {
   position: relative;
