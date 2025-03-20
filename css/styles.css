@@ -20,15 +20,15 @@ ol {
 }
 ol li::marker {
   color: transparent;
-
   /* робимо лічільник невидимим для доступності */
 }
+
 li {
   margin-top: 10px;
 }
 
 .list li::before {
-  content: " " counter(list-item, decimal-leading-zero); /*Елемент додає лічильник перед li, та друге значення це прчинати з0 */
+  content: " " counter(list-item, decimal-leading-zero); /*Елемент додає лічильник перед li, та друге значення це прчинати з 0 */
 }
 
 p {
