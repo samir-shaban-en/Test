@@ -4,10 +4,11 @@ p {
 ol {
   padding-left: 0;
   margin: 0;
+  list-style: decimal-leading-zero; /*Елемент додає лічильник перед li пише з 0 */
 }
 
 ol li::marker {
-  color: transparent;
+  color: transparent; /* робимо лічільник невидимим для доступності */
 }
 
 li {
