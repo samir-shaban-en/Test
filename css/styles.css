@@ -17,7 +17,7 @@ ol {
   margin-right: auto;
 }
 ol {
-  counter-reset: list-item 0; /*нужно для инициализации счетчика*/
+  counter-reset: list-item; /*нужно для инициализации счетчика*/
   padding-left: 0;
   margin: 0;
   background-color: #1b414b;
@@ -47,6 +47,8 @@ li {
   letter-spacing: -0.05em;
   color: #fbfbfb;
   content: " " counter(list-item, decimal-leading-zero); /*Елемент додає лічильник перед li, та друге значення це прчинати з 0 */
+}
+.list li:not(:nth-child(n + 10))::before {
 }
 .stripes {
   padding-top: 38px;
