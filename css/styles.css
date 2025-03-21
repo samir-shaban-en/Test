@@ -27,6 +27,8 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  counter-reset: list-item;
 }
 
 ol li::marker {
@@ -47,11 +49,13 @@ li {
   letter-spacing: -0.05em;
   color: #fbfbfb;
 
-  content: " " counter(list-item, decimal-leading-zero);
+  content: "0" counter(list-item);
 }
-.list li:not(:nth-child(n + 10))::before {
-  /*Елемент додає лічильник перед li, та друге значення це прчинати з 0 */
+
+.list li:nth-child(n + 10):before {
+  content: counter(list-item);
 }
+
 .stripes {
   padding-top: 38px;
 }
