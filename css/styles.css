@@ -17,7 +17,7 @@ ol {
   margin-right: auto;
 }
 ol {
-  counter-reset: list-item -1; /*нужно для инициализации счетчика*/
+  /*нужно для инициализации счетчика*/
   padding-left: 0;
   margin: 0;
   background-color: #1b414b;
@@ -35,6 +35,7 @@ ol li::marker {
 }
 
 li {
+  counter-increment: list-item;
 }
 
 .list li::before {
@@ -45,11 +46,11 @@ li {
   line-height: 1;
   letter-spacing: -0.05em;
   color: #fbfbfb;
-  counter-increment: list-item;
-  content: counter(list-item);
+
+  content: " " counter(list-item, decimal-leading-zero);
 }
 .list li:not(:nth-child(n + 10))::before {
-  content: "0" counter(list-item); /*Елемент додає лічильник перед li, та друге значення це прчинати з 0 */
+  /*Елемент додає лічильник перед li, та друге значення це прчинати з 0 */
 }
 .stripes {
   padding-top: 38px;
