@@ -36,9 +36,10 @@ ol li::marker {
 }
 
 li {
+  counter-increment: list-item;
 }
 
-.list li::before {
+li::before {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 28px;
@@ -47,7 +48,7 @@ li {
   letter-spacing: -0.05em;
   color: #fbfbfb;
 
-  content: counter(list-item);
+  content: counter(list-item, decimal-leading-zero);
 }
 
 .stripes {
