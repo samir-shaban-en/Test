@@ -27,7 +27,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  counter-reset: list-item;
+  counter-reset: unset;
 }
 
 ol li::marker {
@@ -40,6 +40,7 @@ li {
 }
 
 li::before {
+  content: " " counter(list-item);
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 28px;
@@ -47,8 +48,10 @@ li::before {
   line-height: 1;
   letter-spacing: -0.05em;
   color: #fbfbfb;
+}
 
-  content: counter(list-item, decimal-leading-zero);
+li:not(:nth-child(n + 10)):before {
+  content: "0" counter(list-item);
 }
 
 .stripes {
