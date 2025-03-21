@@ -36,7 +36,6 @@ ol li::marker {
 }
 
 li {
-  counter-increment: list-item;
 }
 
 .list li::before {
@@ -48,10 +47,6 @@ li {
   letter-spacing: -0.05em;
   color: #fbfbfb;
 
-  content: counter(list-item, decimal-leading-zero);
-}
-
-.list li:nth-child(n + 10):before {
   content: counter(list-item);
 }
 
