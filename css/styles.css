@@ -17,7 +17,7 @@ ol {
   margin-right: auto;
 }
 ol {
-  counter-reset: list-item 0; /*нужно для инициализации счетчика*/
+  counter-reset: list-item -1; /*нужно для инициализации счетчика*/
   padding-left: 0;
   margin: 0;
   background-color: #1b414b;
@@ -35,7 +35,6 @@ ol li::marker {
 }
 
 li {
-  counter-increment: list-item;
 }
 
 .list li::before {
@@ -46,6 +45,7 @@ li {
   line-height: 1;
   letter-spacing: -0.05em;
   color: #fbfbfb;
+  counter-increment: list-item;
   content: counter(list-item);
 }
 .list li:not(:nth-child(n + 10))::before {
