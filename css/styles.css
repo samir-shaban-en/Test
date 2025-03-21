@@ -17,7 +17,7 @@ ol {
   margin-right: auto;
 }
 ol {
-  counter-reset: list-item; /*нужно для инициализации счетчика*/
+  counter-reset: list-item 1; /*нужно для инициализации счетчика*/
   padding-left: 0;
   margin: 0;
   background-color: #1b414b;
