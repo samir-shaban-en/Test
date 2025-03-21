@@ -46,7 +46,7 @@ li {
   line-height: 1;
   letter-spacing: -0.05em;
   color: #fbfbfb;
-  content: " " counter(list-item);
+  content: counter(list-item);
 }
 .list li:not(:nth-child(n + 10))::before {
   content: "0" counter(list-item); /*Елемент додає лічильник перед li, та друге значення це прчинати з 0 */
