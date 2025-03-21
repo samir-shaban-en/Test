@@ -27,7 +27,6 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 40px;
-
   counter-reset: list-item;
 }
 
@@ -49,7 +48,7 @@ li {
   letter-spacing: -0.05em;
   color: #fbfbfb;
 
-  content: "0" counter(list-item);
+  content: counter(list-item, decimal-leading-zero);
 }
 
 .list li:nth-child(n + 10):before {
